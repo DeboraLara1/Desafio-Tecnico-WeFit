@@ -6,11 +6,15 @@ export const Card = styled.div`
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.2s, box-shadow 0.2s;
-  max-width: 300px;
+  width: 100%;
 
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+  @media (min-width: 300px) and (max-width: 767px) {
+    width: 300px;
+    justify-items: center;
   }
 `;
 
@@ -46,6 +50,10 @@ export const Title = styled.h3`
   text-align: center;
   margin: 0 0 0.8rem 0;
   color: #2f2e41;
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 export const Price = styled.p`
@@ -54,6 +62,10 @@ export const Price = styled.p`
   color: #2f2e41;
   margin-bottom: 1.5rem;
   margin: 0 0 1.5rem 0;
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 export const AddButton = styled.button<{ $hasItems: boolean }>`
@@ -78,6 +90,11 @@ export const AddButton = styled.button<{ $hasItems: boolean }>`
   &:active {
     transform: translateY(1px);
   }
+
+  @media (min-width: 768px) {
+    font-size: 1rem;
+    padding: 1rem;
+  }
 `;
 
 export const ButtonContent = styled.div`
@@ -91,6 +108,15 @@ export const ButtonContent = styled.div`
     width: 16px;
     height: 16px;
   }
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+
+    img {
+      width: 18px;
+      height: 18px;
+    }
+  }
 `;
 
 export const QuantityCounter = styled.span`
@@ -101,4 +127,8 @@ export const QuantityCounter = styled.span`
   font-size: 0.7rem;
   font-weight: 700;
   margin: 1px 0.5rem 0 0;
+
+  @media (min-width: 768px) {
+    font-size: 0.8rem;
+  }
 `;
