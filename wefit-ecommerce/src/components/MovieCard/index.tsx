@@ -1,7 +1,7 @@
 import React from 'react';
 import { Movie } from '../../types';
 import { useCart } from '../../contexts/CartContext';
-import CartIcon from '../../assets/Ico-cart.png';
+import CartIcon from '../../assets/Ico-cart-add.png';
 import { Card, ContextImage, Image, Info, Title, Price, AddButton, ButtonContent, QuantityCounter } from './styles';
 
 interface MovieCardProps {
