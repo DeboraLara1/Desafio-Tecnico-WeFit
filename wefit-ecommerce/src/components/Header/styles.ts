@@ -41,11 +41,19 @@ export const CartInfo = styled.div`
       font-size: 14px;
       font-weight: 500;
       color: white;
+      
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
 
     span:last-child {
       font-size: 12px;
       color: #999999;
+      
+      @media (min-width: 769px) {
+        font-size: 14px;
+      }
     }
   }
 `;
