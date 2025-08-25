@@ -1,46 +1,115 @@
-# Getting Started with Create React App
+# WeFit E-commerce
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto de e-commerce simplificado desenvolvido com React + TypeScript + styled-components para o desafio da WeFit.
 
-## Available Scripts
+## 🚀 Funcionalidades
 
-In the project directory, you can run:
+- **Home**: Lista de filmes disponíveis para compra, buscados da API
+- **Carrinho**: Gerenciamento de itens no carrinho com cálculo de total
+- **Compra Realizada**: Confirmação de pedido com opção de voltar à loja
 
-### `npm start`
+## 🛠️ Tecnologias Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React 18
+- TypeScript
+- styled-components
+- React Router DOM
+- Axios
+- Context API
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 📋 Pré-requisitos
 
-### `npm test`
+- Node.js 14+ instalado
+- npm ou yarn como gerenciador de pacotes
+- Conexão com internet (para acessar a API externa) 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📁 Estrutura do Projeto
 
-### `npm run build`
+```
+src/
+├── components/          # Componentes reutilizáveis
+│   ├── Button/         # Botão reutilizável
+│   ├── CartItem/       # Item individual do carrinho
+│   ├── CartTable/      # Tabela do carrinho
+│   ├── EmptyCart/      # Estado vazio do carrinho
+│   ├── Header/         # Cabeçalho com navegação
+│   ├── LoadingSpinner/ # Spinner de carregamento
+│   ├── MovieCard/      # Card de filme individual
+│   └── QuantityControl # Controle de quantidade
+├── pages/              # Páginas da aplicação
+│   ├── Home/           # Página inicial com lista de filmes
+│   ├── Cart/           # Página do carrinho
+│   └── Success/        # Página de confirmação
+├── contexts/           # Contextos React
+│   └── CartContext.tsx # Contexto do carrinho
+├── services/           # Serviços e APIs
+│   └── api.ts         # Configuração da API
+├── config/             # Configurações
+│   └── api.ts         # Configuração da API
+├── types/              # Definições de tipos TypeScript
+├── styles/             # Estilos globais
+└── assets/             # Imagens e recursos estáticos
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Como Executar
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Passos para Execução
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clonar o repositório:**
+   ```bash
+   git clone https://github.com/DeboraLara1/Desafio-Tecnico-WeFit.git
+   cd Desafio-Tecnico-WeFit/wefit-ecommerce
+   ```
 
-### `npm run eject`
+2. **Instalar dependências:**
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. **Executar a aplicação React:**
+   ```bash
+   npm start
+   ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Acessar a aplicação:**
+   ```
+   http://localhost:3000
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Scripts Disponíveis
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- `npm start`: Inicia o servidor de desenvolvimento
+- `npm run build`: Gera build de produção
+- `npm run eject`: Ejecta as configurações (irreversível)
 
-## Learn More
+## 🌐 API
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+A aplicação consome a API de filmes da WeFit:
+- **Endpoint**: `https://e-comerce-we-fit.vercel.app`
+- **Método**: GET
+- **Resposta**: Lista de filmes com id, título, preço e imagem
+- **Status**: API externa e pública, não requer configuração local
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## ✨ Características do Projeto
+
+- **TypeScript**: Tipagem forte para melhor desenvolvimento
+- **styled-components**: CSS-in-JS para estilos componentizados
+- **Context API**: Gerenciamento de estado global do carrinho
+- **Responsivo**: Design adaptável para diferentes dispositivos
+- **Componentização**: Estrutura modular e reutilizável
+
+## 🎯 Funcionalidades do Carrinho
+
+- Adicionar filmes ao carrinho
+- Remover itens individuais
+- Cálculo automático do total
+- Estado persistente durante a sessão
+- Tela de carrinho vazio com opção de voltar
+
+
+
+## 📱 Compatibilidade
+
+- Navegadores modernos
+- React 18+
+- Node.js 14+
