@@ -1,16 +1,17 @@
 import styled from "styled-components";
+import { colors } from '../../styles';
 
 export const Card = styled.div`
-  background: white;
+  background: ${colors.background.secondary};
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px ${colors.shadow.light};
   overflow: hidden;
   transition: transform 0.2s, box-shadow 0.2s;
   width: 100%;
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 16px ${colors.shadow.medium};
   }
   @media (min-width: 300px) and (max-width: 767px) {
     width: 300px;
@@ -49,7 +50,7 @@ export const Title = styled.h3`
   letter-spacing: 0%;
   text-align: center;
   margin: 0 0 0.8rem 0;
-  color: #2f2e41;
+  color: ${colors.text.primary};
 
   @media (min-width: 768px) {
     font-size: 14px;
@@ -59,7 +60,7 @@ export const Title = styled.h3`
 export const Price = styled.p`
   font-size: 16px;
   font-weight: 700;
-  color: #2f2e41;
+  color: ${colors.text.primary};
   margin-bottom: 1.5rem;
   margin: 0 0 1.5rem 0;
 
@@ -70,8 +71,8 @@ export const Price = styled.p`
 
 export const AddButton = styled.button<{ $hasItems: boolean }>`
   width: 100%;
-  background: ${(props) => (props.$hasItems ? "#039B00" : "#009edd")};
-  color: white;
+  background: ${(props) => (props.$hasItems ? colors.state.success : colors.primary.main)};
+  color: ${colors.text.white};
   padding: 0.75rem;
   border: none;
   border-radius: 4px;
@@ -84,7 +85,7 @@ export const AddButton = styled.button<{ $hasItems: boolean }>`
   justify-content: center;
 
   &:hover {
-    background: ${(props) => (props.$hasItems ? "#027a00" : "#0078a8")};
+    background: ${(props) => (props.$hasItems ? colors.state.successDark : colors.primary.hover)};
   }
 
   &:active {
@@ -120,7 +121,7 @@ export const ButtonContent = styled.div`
 `;
 
 export const QuantityCounter = styled.span`
-  color: white;
+  color: ${colors.text.white};
   display: flex;
   align-items: center;
   justify-content: center;

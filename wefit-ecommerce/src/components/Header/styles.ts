@@ -1,8 +1,11 @@
 import styled from 'styled-components';
+import { colors } from '../../styles';
 
 export const HeaderContainer = styled.header`
-  color: white;
+  color: ${colors.text.white};
   padding: 1rem 2rem;
+  background: ${colors.background.primary};
+  flex-shrink: 0;
 `;
 
 export const Nav = styled.nav`
@@ -15,7 +18,7 @@ export const Nav = styled.nav`
   h1 {
     font-size: 1.8rem;
     font-weight: 20px;
-    color: white;
+    color: ${colors.text.white};
     margin: 0;
   }
 `;
@@ -40,7 +43,7 @@ export const CartInfo = styled.div`
     span:first-child {
       font-size: 14px;
       font-weight: 500;
-      color: white;
+      color: ${colors.text.white};
       
       @media (max-width: 768px) {
         display: none;
@@ -49,7 +52,7 @@ export const CartInfo = styled.div`
 
     span:last-child {
       font-size: 12px;
-      color: #999999;
+      color: ${colors.text.muted};
       
       @media (min-width: 769px) {
         font-size: 14px;
