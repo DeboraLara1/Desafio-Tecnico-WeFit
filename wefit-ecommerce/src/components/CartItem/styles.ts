@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { colors } from '../../styles';
+import styled from "styled-components";
+import { colors } from "../../styles";
 
 export const Container = styled.div`
   display: grid;
@@ -12,12 +12,8 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
-    background: ${colors.background.secondary};
-    border-radius: 8px;
-    box-shadow: 0 2px 8px ${colors.shadow.light};
     position: relative;
     gap: 1rem;
-    margin-bottom: 1rem;
   }
 `;
 
@@ -137,11 +133,11 @@ export const RemoveButton = styled.button`
 
   &.mobile-only {
     display: none;
-    
+
     @media (max-width: 700px) {
       display: block;
       padding: 0.25rem;
-      
+
       img {
         width: 18px;
         height: 18px;
