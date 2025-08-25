@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { colors } from './colors';
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -7,13 +8,26 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html, body {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #2F2E41;
+    background-color: ${colors.background.primary};
+    position: relative;
+  }
+
+  #root {
+    height: 100%;
+    min-height: 100vh;
+    position: relative;
   }
 
   button {
@@ -29,6 +43,13 @@ export const GlobalStyles = createGlobalStyle`
     
   ul {
     list-style: none;
+  }
+
+  @media (max-width: 768px) {
+    html, body {
+      overflow-x: hidden;
+      position: relative;
+    }
   }
 `;
 
