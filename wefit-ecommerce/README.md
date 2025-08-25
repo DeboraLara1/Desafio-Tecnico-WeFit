@@ -85,7 +85,7 @@ src/
 ## 🌐 API
 
 A aplicação consome a API de filmes da WeFit:
-- **Endpoint**: `https://e-comerce-we-fit.vercel.app`
+- **Endpoint**: ` https://wefit-movies.vercel.app/api/movies`
 - **Método**: GET
 - **Resposta**: Lista de filmes com id, título, preço e imagem
 - **Status**: API externa e pública, não requer configuração local
